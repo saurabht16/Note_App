@@ -1,0 +1,24 @@
+Dependecies:
+
+	Pip install Django
+	Pip install djangorestframework
+	pip install django-rest-auth
+	pip install django-widget-tweaks
+
+1. extract the files from zipped folder into notes_app
+2. run python managy.py makemigrations
+3. run python managy.py migrate
+4. run python managy.py createsuperuser
+5. run python managy.py runserver
+
+Points to remember to manuever in the application:
+
+1. access the app via http://127.0.0.1:8000/notes/list
+2. To access the api via Django rest framework: http://127.0.0.1:8000/api/v1/
+3. Access via CURL: curl http://localhost:8000/api/v1/1/
+4. Post via Curl: curl -X POST http://localhost:8000/api/v1/ -d "title=Take Notes&description=New Note&label=First Note&created_by=admin"
+5. You can login via the user created: http://127.0.0.1:8000/login/ 
+6. Create a new user via signup page: http://127.0.0.1:8000/signup/
+7. Search with labels from api call: http://127.0.0.1:8000/api/v1/labels/default/  -> default is the Label
+8. In the application a search box is provided to search 
+

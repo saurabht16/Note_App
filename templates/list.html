@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<form id="searchform" action="{% url 'notes_list' %}" method="get" accept-charset="utf-8">
+      <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search By Label" size="50">
+        <button type="submit" class="btn btn-success">Search</button>
+      </button>
+    </form>
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Notes</th>
+        <th>Contents</th>
+        <th>Labels</th>
+        <th>Created By</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for note in note_list %}
+        <tr>
+          <td>
+            <a href="{% url 'notes_detail' note.id %}">{{ note.title }}</a>
+          </td>
+          <td class="align-middle"><small class="text-muted d-block">{{ note.description }}</small></td>
+            <td class="align-middle"><small class="text-muted d-block">{{ note.labels }}</small></td>
+          <td class="align-middle"><small class="text-muted d-block">{{ note.created_by }}</small></td>
+          <td></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Take a new Note</th>
+      </tr>
+    </thead>
+    </table>
+    <form method='POST' action=''>{% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-success">Create Note</button>
+    </form>
+
+{% endblock %}

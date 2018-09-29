@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Edit Note</th>
+      </tr>
+    </thead>
+    </table>
+    <form method='POST' action=''>{% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-success">Edit Note</button>
+    </form>
+
+{% endblock %}
