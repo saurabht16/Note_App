@@ -21,4 +21,4 @@ Points to remember to manuever in the application:
 6. Create a new user via signup page: http://127.0.0.1:8000/signup/
 7. Search with labels from api call: http://127.0.0.1:8000/api/v1/labels/default/  -> default is the Label
 8. In the application a search box is provided to search 
-test
+
