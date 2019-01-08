@@ -22,7 +22,7 @@ Points to remember to manuever in the application:
 7. Search with labels from api call: http://127.0.0.1:8000/api/v1/labels/default/  -> default is the Label
 8. In the application a search box is provided to search 
 <<<<<<< HEAD
-
 =======
 Test
 >>>>>>> ec171a5fd183442a0aecf1702d816f7a8fa73300
+test
